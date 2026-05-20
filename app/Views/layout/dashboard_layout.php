@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($title) ? esc($title).' — E-Sports Tournament' : 'Dashboard — E-Sports Tournament' ?></title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
@@ -28,7 +31,7 @@
         }
         /* particles */
         .particles{position:fixed;inset:0;pointer-events:none;z-index:0;}
-        .particles span{position:absolute;display:block;border-radius:50%;background:rgba(255,75,43,.07);animation:float linear infinite;}
+        .particles span{position:absolute;display:block;border-radius:50%;background:rgba(255,75,43,.07);animation:float linear infinite;will-change:transform, opacity;}
         .particles span:nth-child(1){width:70px;height:70px;left:5%;animation-duration:22s;}
         .particles span:nth-child(2){width:20px;height:20px;left:40%;animation-duration:14s;animation-delay:4s;background:rgba(120,50,255,.08);}
         .particles span:nth-child(3){width:50px;height:50px;left:75%;animation-duration:18s;animation-delay:2s;}
