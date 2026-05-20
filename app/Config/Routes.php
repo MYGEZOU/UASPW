@@ -50,12 +50,6 @@ $routes->group('', ['filter' => 'role:Admin'], function ($routes) {
     $routes->post('akun/update/(:num)', 'Akun::update/$1');
     $routes->get('akun/hapus/(:num)', 'Akun::hapus/$1');
 
-    // Turnamen Khusus Admin
-    $routes->post('turnamen/simpan', 'Turnamen::simpan');
-    $routes->get('turnamen/edit/(:num)', 'Turnamen::edit/$1');
-    $routes->post('turnamen/update/(:num)', 'Turnamen::update/$1');
-    $routes->get('turnamen/hapus/(:num)', 'Turnamen::hapus/$1');
-
     // Pendaftaran
     $routes->get('daftar/ubah-status/(:num)', 'Daftar::ubahStatus/$1');
     
@@ -75,6 +69,10 @@ $routes->group('', ['filter' => 'role:Admin,AdminGame'], function ($routes) {
     // Turnamen
     $routes->get('turnamen', 'Turnamen::index');
     $routes->get('turnamen/tambah', 'Turnamen::tambah');
+    $routes->post('turnamen/simpan', 'Turnamen::simpan');
+    $routes->get('turnamen/edit/(:num)', 'Turnamen::edit/$1');
+    $routes->post('turnamen/update/(:num)', 'Turnamen::update/$1');
+    $routes->get('turnamen/hapus/(:num)', 'Turnamen::hapus/$1');
     
     // Tim
     $routes->get('tim', 'Tim::index');

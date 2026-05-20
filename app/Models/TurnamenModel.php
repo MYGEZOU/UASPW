@@ -11,8 +11,7 @@ class TurnamenModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
-    protected $protectFields    = true;
-    protected $allowedFields    = ['nama_turnamen', 'id_game', 'tanggal_mulai', 'biaya_pendaftaran', 'status'];
+    protected $allowedFields    = ['nama_turnamen', 'id_game', 'tanggal_mulai', 'biaya_pendaftaran', 'status', 'banner'];
 
     public function getTurnamenAktif()
     {

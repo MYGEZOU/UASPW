@@ -10,7 +10,7 @@
         <div class="card-header">
             <h4><?= isset($turnamen) ? 'Edit' : 'Tambah' ?> Data Turnamen</h4>
         </div>
-        <form action="<?= base_url(isset($turnamen) && !empty($turnamen['id_turnamen']) ? 'turnamen/update/'.$turnamen['id_turnamen'] : 'turnamen/simpan') ?>" method="post">
+        <form action="<?= base_url(isset($turnamen) && !empty($turnamen['id_turnamen']) ? 'turnamen/update/'.$turnamen['id_turnamen'] : 'turnamen/simpan') ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field() ?>
             <div class="card-body-inner">
                 <div class="form-group">
@@ -43,6 +43,15 @@
                         <option value="Berlangsung" <?= (old('status', $turnamen['status'] ?? '') == 'Berlangsung') ? 'selected' : '' ?>>Berlangsung</option>
                         <option value="Selesai" <?= (old('status', $turnamen['status'] ?? '') == 'Selesai') ? 'selected' : '' ?>>Selesai</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Banner Turnamen (Opsional, max 2MB)</label>
+                    <input type="file" name="banner" class="form-control" accept="image/jpeg,image/png,image/webp">
+                    <?php if (isset($turnamen) && !empty($turnamen['banner'])): ?>
+                        <div style="margin-top: 10px;">
+                            <img src="<?= base_url('uploads/turnamen/' . $turnamen['banner']) ?>" alt="Banner" style="max-width: 100%; border-radius: 8px;">
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="card-footer-inner" style="display:flex;gap:10px">

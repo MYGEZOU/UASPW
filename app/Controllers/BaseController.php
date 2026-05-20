@@ -59,7 +59,7 @@ abstract class BaseController extends Controller
      *
      * @return bool true jika akses ditolak (gunakan: if ($this->denyRole('Admin')) return;)
      */
-    protected function checkRole(string $requiredRole): bool
+    protected function checkRole($requiredRoles): bool
     {
         if (!session()->get('id_akun')) {
             session()->setFlashdata('error', 'Silakan login terlebih dahulu.');
@@ -67,7 +67,9 @@ abstract class BaseController extends Controller
             exit;
         }
 
-        if (session()->get('peran') !== $requiredRole) {
+        $roles = is_array($requiredRoles) ? $requiredRoles : explode(',', $requiredRoles);
+
+        if (!in_array(session()->get('peran'), $roles)) {
             session()->setFlashdata('error', 'Akses ditolak.');
             header('Location: ' . base_url('dashboard'));
             exit;

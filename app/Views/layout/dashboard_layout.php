@@ -391,6 +391,7 @@
             </a>
             <div class="nav-sub">
                 <?php navLink('turnamen','','Data Turnamen',$cur); ?>
+                <?php navLink('game','','Master Game',$cur); ?>
             </div>
         </div>
         <div class="nav-item" id="ni-tim">
@@ -414,15 +415,34 @@
         <?php elseif ($peran === 'AdminGame'): ?>
         <div class="nav-section-title">Main</div>
         <?php navLink('dashboard','fa-home','Dashboard',$cur); ?>
-        <div class="nav-section-title">Turnamen</div>
-        <?php navLink('turnamen','fa-trophy','Kelola Turnamen',$cur); ?>
-        <?php navLink('jadwal','fa-calendar-alt','Jadwal',$cur); ?>
-        <?php navLink('skor','fa-star','Input Skor',$cur); ?>
+        
+        <div class="nav-section-title">Master Data</div>
+        <div class="nav-item" id="ni-turnamen">
+            <a class="nav-link" href="#" onclick="toggleNav('ni-turnamen');return false;">
+                <i class="fas fa-trophy"></i> Turnamen <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+            <div class="nav-sub">
+                <?php navLink('turnamen','','Data Turnamen',$cur); ?>
+                <?php navLink('game','','Master Game',$cur); ?>
+            </div>
+        </div>
+        <div class="nav-item" id="ni-tim">
+            <a class="nav-link" href="#" onclick="toggleNav('ni-tim');return false;">
+                <i class="fas fa-users"></i> Tim & Anggota <i class="fas fa-chevron-right nav-arrow"></i>
+            </a>
+            <div class="nav-sub">
+                <?php navLink('tim','','Data Tim',$cur); ?>
+            </div>
+        </div>
+
         <div class="nav-section-title">Transaksi</div>
+        <?php navLink('daftar','fa-clipboard-list','Pendaftaran',$cur); ?>
         <?php navLink('pembayaran/menunggu','fa-clock','Konfirmasi Bayar',$cur); ?>
         <?php navLink('pembayaran/riwayat','fa-history','Riwayat Lunas',$cur); ?>
-        <div class="nav-section-title">Data</div>
-        <?php navLink('tim','fa-users','Tim & Peserta',$cur); ?>
+        
+        <div class="nav-section-title">Pertandingan</div>
+        <?php navLink('jadwal','fa-calendar-alt','Jadwal',$cur); ?>
+        <?php navLink('skor','fa-star','Input Skor',$cur); ?>
 
         <?php elseif ($peran === 'Peserta'): ?>
         <div class="nav-section-title">Main</div>

@@ -49,7 +49,7 @@ class Turnamen extends BaseController
 
     public function tambah()
     {
-        $this->checkRole('Admin');
+        $this->checkRole(['Admin', 'AdminGame']);
         
         $gameModel = new \App\Models\GameModel();
         $data['games'] = $gameModel->findAll();
@@ -59,7 +59,14 @@ class Turnamen extends BaseController
 
     public function simpan()
     {
-        $this->checkRole('Admin');
+        $this->checkRole(['Admin', 'AdminGame']);
+        
+        $file = $this->request->getFile('banner');
+        $bannerName = 'default_banner.jpg';
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $bannerName = $file->getRandomName();
+            $file->move(FCPATH . 'uploads/turnamen', $bannerName);
+        }
         
         $model = new TurnamenModel();
         $data = [
@@ -68,6 +75,7 @@ class Turnamen extends BaseController
             'tanggal_mulai'     => $this->request->getVar('tanggal_mulai'),
             'biaya_pendaftaran' => $this->request->getVar('biaya_pendaftaran'),
             'status'            => $this->request->getVar('status'),
+            'banner'            => $bannerName
         ];
         
         $model->insert($data);
@@ -76,7 +84,7 @@ class Turnamen extends BaseController
 
     public function edit($id)
     {
-        $this->checkRole('Admin');
+        $this->checkRole(['Admin', 'AdminGame']);
         
         $model = new TurnamenModel();
         $gameModel = new \App\Models\GameModel();
@@ -88,9 +96,11 @@ class Turnamen extends BaseController
 
     public function update($id)
     {
-        $this->checkRole('Admin');
+        $this->checkRole(['Admin', 'AdminGame']);
         
         $model = new TurnamenModel();
+        $turnamen = $model->find($id);
+        
         $data = [
             'nama_turnamen'     => $this->request->getVar('nama_turnamen'),
             'id_game'           => $this->request->getVar('id_game'),
@@ -99,13 +109,24 @@ class Turnamen extends BaseController
             'status'            => $this->request->getVar('status'),
         ];
         
+        $file = $this->request->getFile('banner');
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $bannerName = $file->getRandomName();
+            $file->move(FCPATH . 'uploads/turnamen', $bannerName);
+            $data['banner'] = $bannerName;
+            
+            if ($turnamen['banner'] && $turnamen['banner'] != 'default_banner.jpg' && file_exists(FCPATH . 'uploads/turnamen/' . $turnamen['banner'])) {
+                unlink(FCPATH . 'uploads/turnamen/' . $turnamen['banner']);
+            }
+        }
+        
         $model->update($id, $data);
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil diupdate.');
     }
 
     public function hapus($id)
     {
-        $this->checkRole('Admin');
+        $this->checkRole(['Admin', 'AdminGame']);
         
         $model = new TurnamenModel();
         $model->delete($id);

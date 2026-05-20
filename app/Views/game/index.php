@@ -14,7 +14,7 @@
         <table class="tbl">
             <thead>
                 <tr>
-                    <th>Logo</th>
+
                     <th>Nama Game</th>
                     <th>Slug</th>
                     <th>Deskripsi</th>
@@ -24,15 +24,7 @@
             <tbody>
                 <?php foreach ($games as $g): ?>
                 <tr>
-                    <td>
-                        <?php if ($g['logo']): ?>
-                            <img src="<?= base_url('uploads/game/'.$g['logo']) ?>" alt="<?= esc($g['nama_game']) ?>" width="50" height="50" style="object-fit:cover; border-radius:5px;">
-                        <?php else: ?>
-                            <div style="width:50px; height:50px; background:#444; border-radius:5px; display:flex; align-items:center; justify-content:center; color:#888;">
-                                <i class="fas fa-image"></i>
-                            </div>
-                        <?php endif; ?>
-                    </td>
+
                     <td><strong><?= esc($g['nama_game']) ?></strong></td>
                     <td><?= esc($g['slug']) ?></td>
                     <td><?= esc(substr($g['deskripsi'] ?? '', 0, 50)) ?><?= (strlen($g['deskripsi'] ?? '') > 50) ? '...' : '' ?></td>
@@ -44,7 +36,7 @@
                 <?php endforeach; ?>
                 <?php if (empty($games)): ?>
                 <tr>
-                    <td colspan="5">
+                    <td colspan="4">
                         <div class="empty-state"><i class="fas fa-gamepad"></i><p>Belum ada data game</p></div>
                     </td>
                 </tr>

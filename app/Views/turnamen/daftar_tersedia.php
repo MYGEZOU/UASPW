@@ -138,26 +138,22 @@
         </div>
     <?php else: ?>
         <?php foreach ($turnamen as $t):
-            $game = strtolower($t['game'] ?? '');
-            $bannerClass = 'other';
-            $gameEmoji = '🎮';
-            if (str_contains($game, 'mobile') || str_contains($game, 'legend')) { $bannerClass = 'ml'; $gameEmoji = '⚔️'; }
-            elseif (str_contains($game, 'pubg')) { $bannerClass = 'pubg'; $gameEmoji = '🔫'; }
-            elseif (str_contains($game, 'free') || str_contains($game, 'fire')) { $bannerClass = 'ff'; $gameEmoji = '🔥'; }
-            elseif (str_contains($game, 'valo')) { $bannerClass = 'val'; $gameEmoji = '🎯'; }
             $sudahDaftar = isset($pendaftaran_saya[$t['id_turnamen']]);
             $statusBayar = $sudahDaftar ? $pendaftaran_saya[$t['id_turnamen']]['status_pembayaran'] : '';
+            $bannerImg = !empty($t['banner']) ? base_url('uploads/turnamen/' . $t['banner']) : base_url('uploads/turnamen/default_banner.jpg');
         ?>
         <div class="tournament-card">
-            <div class="tc-banner <?= $bannerClass ?>">
-                <?= $gameEmoji ?>
-                <span class="tc-game-tag"><?= esc($t['game'] ?? 'Game') ?></span>
+            <div class="tc-banner" style="background-image: url('<?= $bannerImg ?>'); background-size: cover; background-position: center; position: relative;">
+                <!-- Add a subtle dark overlay so text is readable -->
+                <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4); border-radius: inherit;"></div>
+                
+                <span class="tc-game-tag" style="z-index: 2;"><?= esc($t['game'] ?? 'Game') ?></span>
                 <?php if ($sudahDaftar): ?>
-                    <span class="tc-status-tag <?= $statusBayar === 'Lunas' ? 'lunas' : '' ?>">
+                    <span class="tc-status-tag <?= $statusBayar === 'Lunas' ? 'lunas' : '' ?>" style="z-index: 2;">
                         <?= $statusBayar === 'Lunas' ? '✓ Terdaftar' : '⏳ Menunggu' ?>
                     </span>
                 <?php else: ?>
-                    <span class="tc-status-tag">🟢 BUKA</span>
+                    <span class="tc-status-tag" style="z-index: 2;">🟢 BUKA</span>
                 <?php endif; ?>
             </div>
             <div class="tc-body">
