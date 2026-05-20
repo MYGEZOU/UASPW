@@ -1,0 +1,648 @@
+CRITICAL - 2026-05-04 19:37:18 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 19:37:19 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 19:37:23 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 19:39:48 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 19:40:43 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 19:40:56 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:48:44 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:49:08 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:49:20 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:50:01 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:52:01 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:53:48 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:54:05 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:54:08 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:54:30 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:56:37 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:57:16 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:57:43 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:57:48 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:57:49 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 19:58:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 19:58:10 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: /]
+in APPPATH\Views\auth\login.php on line 76.
+ 1 APPPATH\Views\auth\login.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php', 76)
+ 2 SYSTEMPATH\View\View.php(238): include('C:\\xampp\\htdocs\\UASPW\\app\\Views\\auth\\login.php')
+ 3 SYSTEMPATH\View\View.php(241): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('auth/login', [], true)
+ 5 APPPATH\Controllers\Auth.php(12): view('auth/login', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 20:00:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:20:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 20:39:02 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/vendors.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/vendors.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/core/colors/palette-gradient.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/core/colors/palette-gradient.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/core/menu/menu-types/vertical-menu.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/core/menu/menu-types/vertical-menu.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/app.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/app.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/vendors/js/vendors.min.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/vendors/js/vendors.min.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/js/core/app-menu.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/js/core/app-menu.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/js/core/app.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/js/core/app.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/images/ico/favicon.ico]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/images/ico/favicon.ico\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 20:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 20:39:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/vendors.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/vendors.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/core/menu/menu-types/vertical-menu.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/core/menu/menu-types/vertical-menu.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/app.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/app.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/css/core/colors/palette-gradient.css]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/css/core/colors/palette-gradient.css\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/vendors/js/vendors.min.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/vendors/js/vendors.min.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/js/core/app-menu.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/js/core/app-menu.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/js/core/app.js]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/js/core/app.js\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:39:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: GET, Route: assets/app-assets/images/ico/favicon.ico]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'GET: assets/app-assets/images/ico/favicon.ico\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 20:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 20:39:49 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/404.php"
+[Method: POST, Route: auth/proses_register]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(226): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/404.php')
+ 2 SYSTEMPATH\Common.php(1250): CodeIgniter\View\View->render('errors/404', [], true)
+ 3 APPPATH\Config\Routes.php(119): view('errors/404')
+ 4 SYSTEMPATH\CodeIgniter.php(975): CodeIgniter\Router\RouteCollection->{closure}('Can\'t find a route for \'POST: auth/proses_register\'.')
+ 5 SYSTEMPATH\CodeIgniter.php(346): CodeIgniter\CodeIgniter->display404errors(Object(CodeIgniter\Exceptions\PageNotFoundException))
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 20:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 20:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-05-04 20:52:13 --> Unknown column 'name_lengkap' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (:username:, :email:, :password:, :name_lengkap:, :peran:, :tanggal_dibuat:)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(66): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesRegister()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:52:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name_lengkap' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 724.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (:username:, :email:, :password:, :name_lengkap:, :peran:, :tanggal_dibuat:)', [...], false)
+ 2 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Auth.php(66): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesRegister()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:52:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name_lengkap' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (:username:, :email:, :password:, :name_lengkap:, :peran:, :tanggal_dibuat:)', [...], false)
+ 4 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Auth.php(66): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesRegister()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 20:52:13 --> [Caused by] mysqli_sql_exception: Unknown column 'name_lengkap' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(769): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(686): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (\'sat\', \'satriadarzkine@gmail.com\', \'$2y$10$EjiRUygiBpxLVyqcYAYJN.DHtK75dmLL2fRynm3e.ylvWY/ifMwwy\', \'sat\', \'Peserta\', \'2026-05-04 20:52:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `akun` (`username`, `email`, `password`, `name_lengkap`, `peran`, `tanggal_dibuat`) VALUES (:username:, :email:, :password:, :name_lengkap:, :peran:, :tanggal_dibuat:)', [...], false)
+ 5 SYSTEMPATH\Model.php(356): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(898): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(665): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(66): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesRegister()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 20:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 21:05:20 --> ErrorException: Undefined array key "name_lengkap"
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name_lengkap"', 'C:\\xampp\\htdocs\\UASPW\\app\\Controllers\\Auth.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 21:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 21:06:09 --> ErrorException: Undefined array key "name_lengkap"
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name_lengkap"', 'C:\\xampp\\htdocs\\UASPW\\app\\Controllers\\Auth.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-04 21:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 21:06:33 --> ErrorException: Undefined array key "name_lengkap"
+[Method: POST, Route: login]
+in APPPATH\Controllers\Auth.php on line 27.
+ 1 APPPATH\Controllers\Auth.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "name_lengkap"', 'C:\\xampp\\htdocs\\UASPW\\app\\Controllers\\Auth.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->prosesLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-04 21:08:16 --> ErrorException: Cannot redeclare App\Controllers\Auth::prosesLogin()
+[Method: GET, Route: login]
+in APPPATH\Controllers\Auth.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-04 21:08:19 --> ErrorException: Cannot redeclare App\Controllers\Auth::prosesLogin()
+[Method: GET, Route: register]
+in APPPATH\Controllers\Auth.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-04 21:08:26 --> ErrorException: Cannot redeclare App\Controllers\Auth::prosesLogin()
+[Method: GET, Route: /]
+in APPPATH\Controllers\Auth.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2026-05-04 21:08:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-04 21:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-04 21:09:08 --> CodeIgniter\Filters\Exceptions\FilterException: "auth" filter must have a matching alias defined.
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('auth')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('auth', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

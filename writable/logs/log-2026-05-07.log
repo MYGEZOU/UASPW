@@ -1,0 +1,8 @@
+CRITICAL - 2026-05-07 11:42:09 --> ErrorException: Cannot redeclare App\Controllers\Auth::register()
+[Method: GET, Route: auth/logout]
+in APPPATH\Controllers\Auth.php on line 81.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-05-07 11:42:35 --> ErrorException: Cannot redeclare App\Controllers\Auth::register()
+[Method: GET, Route: /]
+in APPPATH\Controllers\Auth.php on line 81.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
