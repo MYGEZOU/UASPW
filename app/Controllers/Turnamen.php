@@ -61,12 +61,7 @@ class Turnamen extends BaseController
     {
         $this->checkRole(['Admin', 'AdminGame']);
         
-        $file = $this->request->getFile('banner');
-        $bannerName = 'default_banner.jpg';
-        if ($file && $file->isValid() && !$file->hasMoved()) {
-            $bannerName = $file->getRandomName();
-            $file->move(FCPATH . 'uploads/turnamen', $bannerName);
-        }
+        $bannerName = $this->handleUpload($this->request->getFile('banner'), 'turnamen', null, 'default_banner.jpg');
         
         $model = new TurnamenModel();
         $data = [
@@ -109,16 +104,7 @@ class Turnamen extends BaseController
             'status'            => $this->request->getVar('status'),
         ];
         
-        $file = $this->request->getFile('banner');
-        if ($file && $file->isValid() && !$file->hasMoved()) {
-            $bannerName = $file->getRandomName();
-            $file->move(FCPATH . 'uploads/turnamen', $bannerName);
-            $data['banner'] = $bannerName;
-            
-            if ($turnamen['banner'] && $turnamen['banner'] != 'default_banner.jpg' && file_exists(FCPATH . 'uploads/turnamen/' . $turnamen['banner'])) {
-                unlink(FCPATH . 'uploads/turnamen/' . $turnamen['banner']);
-            }
-        }
+        $data['banner'] = $this->handleUpload($this->request->getFile('banner'), 'turnamen', $turnamen['banner'], 'default_banner.jpg');
         
         $model->update($id, $data);
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil diupdate.');

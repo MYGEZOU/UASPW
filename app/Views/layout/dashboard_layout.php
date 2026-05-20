@@ -380,34 +380,53 @@
             echo '<a class="nav-link '.$active.'" href="'.base_url($href).'"><i class="fas '.$icon.'"></i> '.$label.'</a>';
         }
 
+        function navDropdown($id, $icon, $label, $links, $cur) {
+            // Check if any child link is active
+            $isOpen = false;
+            foreach($links as $link) {
+                if (strpos($cur, base_url($link['href'])) !== false && $link['href'] !== '#') {
+                    $isOpen = true;
+                    break;
+                }
+            }
+            $openClass = $isOpen ? 'open' : '';
+            
+            echo '<div class="nav-item '.$openClass.'" id="'.$id.'">
+                    <a class="nav-link" href="#" onclick="toggleNav(\''.$id.'\');return false;">
+                        <i class="fas '.$icon.'"></i> '.$label.' <i class="fas fa-chevron-right nav-arrow"></i>
+                    </a>
+                    <div class="nav-sub">';
+            foreach($links as $link) {
+                navLink($link['href'], '', $link['label'], $cur);
+            }
+            echo '  </div>
+                  </div>';
+        }
+
         if ($peran === 'Admin'):
         ?>
         <div class="nav-section-title">Main</div>
         <?php navLink('dashboard','fa-home','Dashboard',$cur); ?>
+        
         <div class="nav-section-title">Master Data</div>
-        <div class="nav-item" id="ni-turnamen">
-            <a class="nav-link" href="#" onclick="toggleNav('ni-turnamen');return false;">
-                <i class="fas fa-trophy"></i> Turnamen <i class="fas fa-chevron-right nav-arrow"></i>
-            </a>
-            <div class="nav-sub">
-                <?php navLink('turnamen','','Data Turnamen',$cur); ?>
-                <?php navLink('game','','Master Game',$cur); ?>
-            </div>
-        </div>
-        <div class="nav-item" id="ni-tim">
-            <a class="nav-link" href="#" onclick="toggleNav('ni-tim');return false;">
-                <i class="fas fa-users"></i> Tim & Anggota <i class="fas fa-chevron-right nav-arrow"></i>
-            </a>
-            <div class="nav-sub">
-                <?php navLink('tim','','Data Tim',$cur); ?>
-                <?php navLink('anggota','','Data Anggota',$cur); ?>
-            </div>
-        </div>
+        <?php 
+            navDropdown('ni-turnamen', 'fa-trophy', 'Turnamen', [
+                ['href' => 'turnamen', 'label' => 'Data Turnamen'],
+                ['href' => 'game', 'label' => 'Master Game']
+            ], $cur);
+            
+            navDropdown('ni-tim', 'fa-users', 'Tim & Anggota', [
+                ['href' => 'tim', 'label' => 'Data Tim'],
+                ['href' => 'anggota', 'label' => 'Data Anggota']
+            ], $cur);
+        ?>
         <?php navLink('akun','fa-user-cog','Manajemen Akun',$cur); ?>
+        
         <div class="nav-section-title">Transaksi</div>
         <?php navLink('daftar','fa-clipboard-list','Pendaftaran',$cur); ?>
         <?php navLink('pembayaran/menunggu','fa-clock','Konfirmasi Bayar',$cur); ?>
         <?php navLink('pembayaran/riwayat','fa-history','Riwayat Lunas',$cur); ?>
+        
         <div class="nav-section-title">Pertandingan</div>
         <?php navLink('jadwal','fa-calendar-alt','Jadwal',$cur); ?>
         <?php navLink('skor','fa-star','Input Skor',$cur); ?>
@@ -417,23 +436,16 @@
         <?php navLink('dashboard','fa-home','Dashboard',$cur); ?>
         
         <div class="nav-section-title">Master Data</div>
-        <div class="nav-item" id="ni-turnamen">
-            <a class="nav-link" href="#" onclick="toggleNav('ni-turnamen');return false;">
-                <i class="fas fa-trophy"></i> Turnamen <i class="fas fa-chevron-right nav-arrow"></i>
-            </a>
-            <div class="nav-sub">
-                <?php navLink('turnamen','','Data Turnamen',$cur); ?>
-                <?php navLink('game','','Master Game',$cur); ?>
-            </div>
-        </div>
-        <div class="nav-item" id="ni-tim">
-            <a class="nav-link" href="#" onclick="toggleNav('ni-tim');return false;">
-                <i class="fas fa-users"></i> Tim & Anggota <i class="fas fa-chevron-right nav-arrow"></i>
-            </a>
-            <div class="nav-sub">
-                <?php navLink('tim','','Data Tim',$cur); ?>
-            </div>
-        </div>
+        <?php 
+            navDropdown('ni-turnamen', 'fa-trophy', 'Turnamen', [
+                ['href' => 'turnamen', 'label' => 'Data Turnamen'],
+                ['href' => 'game', 'label' => 'Master Game']
+            ], $cur);
+            
+            navDropdown('ni-tim', 'fa-users', 'Tim & Anggota', [
+                ['href' => 'tim', 'label' => 'Data Tim']
+            ], $cur);
+        ?>
 
         <div class="nav-section-title">Transaksi</div>
         <?php navLink('daftar','fa-clipboard-list','Pendaftaran',$cur); ?>
@@ -449,15 +461,14 @@
         <?php navLink('dashboard','fa-home','Dashboard',$cur); ?>
         <div class="nav-section-title">Saya</div>
         <?php navLink('tim/profil','fa-users','Tim Saya',$cur); ?>
-        <div class="nav-item" id="ni-peserta-turnamen">
-            <a class="nav-link" href="#" onclick="toggleNav('ni-peserta-turnamen');return false;">
-                <i class="fas fa-trophy"></i> Turnamen <i class="fas fa-chevron-right nav-arrow"></i>
-            </a>
-            <div class="nav-sub">
-                <?php navLink('turnamen/daftar-tersedia','','Daftar Turnamen',$cur); ?>
-                <?php navLink('turnamen/peserta','','Turnamen Saya',$cur); ?>
-            </div>
-        </div>
+        
+        <?php 
+            navDropdown('ni-peserta-turnamen', 'fa-trophy', 'Turnamen', [
+                ['href' => 'turnamen/daftar-tersedia', 'label' => 'Daftar Turnamen'],
+                ['href' => 'turnamen/peserta', 'label' => 'Turnamen Saya']
+            ], $cur);
+        ?>
+        
         <?php navLink('pembayaran/saya','fa-file-invoice-dollar','Tagihan & Riwayat',$cur); ?>
         <?php navLink('jadwal/saya','fa-calendar-alt','Jadwal & Skor',$cur); ?>
         <?php endif; ?>

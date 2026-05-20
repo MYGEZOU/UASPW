@@ -64,12 +64,6 @@ class PembayaranController extends BaseController
             return redirect()->to('pembayaran/saya')->with('error', 'Data pendaftaran tidak valid.');
         }
 
-        // Validasi file
-        $file = $this->request->getFile('bukti_pembayaran');
-        if (!$file || !$file->isValid()) {
-            return redirect()->back()->with('error', 'Harap pilih file yang valid.');
-        }
-
         $validationRule = [
             'bukti_pembayaran' => [
                 'label' => 'Bukti Pembayaran',
@@ -77,13 +71,11 @@ class PembayaranController extends BaseController
             ]
         ];
 
-        if (!$this->validate($validationRule)) {
-            return redirect()->back()->with('error', $this->validator->getErrors()['bukti_pembayaran'] ?? 'Format/ukuran file tidak valid.');
+        if ($this->validateInput($validationRule)) {
+            return redirect()->back()->withInput();
         }
 
-        $newName = $file->getRandomName();
-        // Simpan ke direktori public/uploads/bukti_pembayaran
-        $file->move(FCPATH . 'uploads/bukti_pembayaran', $newName);
+        $newName = $this->handleUpload($this->request->getFile('bukti_pembayaran'), 'bukti_pembayaran');
 
         // Hapus bukti lama jika ada
         if (!empty($daftar['bukti_pembayaran']) && file_exists(FCPATH . 'uploads/bukti_pembayaran/' . $daftar['bukti_pembayaran'])) {

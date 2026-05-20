@@ -77,4 +77,38 @@ abstract class BaseController extends Controller
 
         return false;
     }
+
+    /**
+     * Sentralisasi logika upload file untuk menghindari perulangan (DRY)
+     */
+    protected function handleUpload($file, string $folder, $oldFileName = null, $defaultFileName = null)
+    {
+        $fileName = $defaultFileName;
+        
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            $fileName = $file->getRandomName();
+            $file->move(FCPATH . 'uploads/' . $folder, $fileName);
+            
+            // Hapus file lama jika ada dan bukan default
+            if ($oldFileName && $oldFileName !== $defaultFileName && file_exists(FCPATH . 'uploads/' . $folder . '/' . $oldFileName)) {
+                unlink(FCPATH . 'uploads/' . $folder . '/' . $oldFileName);
+            }
+        } else if ($oldFileName) {
+            $fileName = $oldFileName; // Pertahankan yang lama jika tidak ada upload baru
+        }
+        
+        return $fileName;
+    }
+
+    /**
+     * Sentralisasi logika validasi form
+     */
+    protected function validateInput(array $rules)
+    {
+        if (!$this->validate($rules)) {
+            session()->setFlashdata('errors', $this->validator->getErrors());
+            return true; // Return true jika validasi gagal
+        }
+        return false; // Validasi sukses
+    }
 }

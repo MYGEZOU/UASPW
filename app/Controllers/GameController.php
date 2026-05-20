@@ -38,17 +38,11 @@ class GameController extends BaseController
             'logo'      => 'max_size[logo,2048]|is_image[logo]|mime_in[logo,image/jpg,image/jpeg,image/png,image/webp]'
         ];
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        if ($this->validateInput($rules)) {
+            return redirect()->back()->withInput();
         }
 
-        $logoFile = $this->request->getFile('logo');
-        $logoName = null;
-
-        if ($logoFile && $logoFile->isValid() && !$logoFile->hasMoved()) {
-            $logoName = 'game_' . time() . '_' . rand(1000, 9999) . '.' . $logoFile->getExtension();
-            $logoFile->move(FCPATH . 'uploads/game', $logoName);
-        }
+        $logoName = $this->handleUpload($this->request->getFile('logo'), 'game');
 
         $this->gameModel->save([
             'nama_game' => $this->request->getVar('nama_game'),
@@ -85,22 +79,11 @@ class GameController extends BaseController
             'logo'      => 'max_size[logo,2048]|is_image[logo]|mime_in[logo,image/jpg,image/jpeg,image/png,image/webp]'
         ];
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        if ($this->validateInput($rules)) {
+            return redirect()->back()->withInput();
         }
 
-        $logoFile = $this->request->getFile('logo');
-        $logoName = $game['logo'];
-
-        if ($logoFile && $logoFile->isValid() && !$logoFile->hasMoved()) {
-            $logoName = 'game_' . time() . '_' . rand(1000, 9999) . '.' . $logoFile->getExtension();
-            $logoFile->move(FCPATH . 'uploads/game', $logoName);
-
-            // Hapus logo lama
-            if ($game['logo'] && file_exists(FCPATH . 'uploads/game/' . $game['logo'])) {
-                unlink(FCPATH . 'uploads/game/' . $game['logo']);
-            }
-        }
+        $logoName = $this->handleUpload($this->request->getFile('logo'), 'game', $game['logo']);
 
         $this->gameModel->save([
             'id_game'   => $id,

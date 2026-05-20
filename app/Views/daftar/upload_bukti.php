@@ -10,7 +10,9 @@
         <div class="card-header">
             <h4>Upload Bukti Pembayaran Pendaftaran</h4>
         </div>
-        <div class="card-body">
+        <form action="<?= base_url('pembayaran/upload/'.$daftar['id_daftar']) ?>" method="post" enctype="multipart/form-data">
+            <?= csrf_field() ?>
+            <div class="card-body-inner">
             <?php if (session()->getFlashdata('error')): ?>
                 <div class="alert alert-danger" style="margin-bottom: 20px;"><?= session()->getFlashdata('error') ?></div>
             <?php endif; ?>
@@ -20,19 +22,16 @@
                 <p style="margin: 0 0 5px 0;"><strong>Tanggal Daftar:</strong> <?= date('d M Y H:i', strtotime($daftar['tanggal_daftar'])) ?></p>
                 <p style="margin: 0; font-size: 18px; color: #4facfe;"><strong>Total Dibayar: Rp <?= number_format($turnamen['biaya_pendaftaran'], 0, ',', '.') ?></strong></p>
             </div>
-
-            <form action="<?= base_url('pembayaran/upload/'.$daftar['id_daftar']) ?>" method="post" enctype="multipart/form-data">
-                <?= csrf_field() ?>
                 
                 <div class="form-group">
                     <label class="form-label">Metode Pembayaran (Transfer Ke)</label>
                     <select class="form-control" id="pilih_metode" onchange="showRekening()" required>
                         <option value="">-- Pilih Metode Pembayaran --</option>
-                        <option value="bca">Transfer Bank BCA</option>
-                        <option value="bri">Transfer Bank BRI</option>
+                        <option value="mandiri">Transfer Bank MANDIRI</option>
                         <option value="dana">DANA</option>
                         <option value="gopay">GoPay</option>
                         <option value="ovo">OVO</option>
+                        <option value="qris">QRIS</option>
                     </select>
                 </div>
                 
@@ -40,6 +39,9 @@
                     <p style="margin:0 0 5px 0; font-size:12px; color:var(--text-muted)">Silakan transfer nominal sesuai tagihan ke rekening berikut:</p>
                     <h2 id="nomor_rekening" style="margin:5px 0; color:#fff; letter-spacing:2px; font-weight:800;"></h2>
                     <p style="margin:0; font-size:14px; font-weight:600; color:#5383fe" id="nama_rekening"></p>
+                    <div id="qris_container" style="display:none; margin-top:15px;">
+                        <img src="<?= base_url('uploads/QRIS.jpeg') ?>" alt="QRIS Barcode" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                    </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label">File Bukti Transfer (JPG/PNG, Max 2MB)</label>
@@ -64,12 +66,12 @@
                 </div>
                 <?php endif; ?>
 
-                <div style="margin-top:20px; display:flex; gap:10px">
-                    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Upload & Simpan</button>
-                    <a href="<?= base_url('pembayaran/saya') ?>" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Kembali</a>
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="card-footer-inner" style="display:flex; gap:10px">
+                <button type="submit" class="btn btn-primary"><i class="fas fa-upload"></i> Upload & Simpan</button>
+                <a href="<?= base_url('pembayaran/saya') ?>" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Kembali</a>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -80,16 +82,24 @@ function showRekening() {
     const no = document.getElementById('nomor_rekening');
     const nama = document.getElementById('nama_rekening');
     const methods = {
-        bca:   { no: '731 025 2525',       nama: 'a.n. PT E-Sports Indonesia (BCA)' },
-        bri:   { no: '0023 0102 3456 501', nama: 'a.n. PT E-Sports Indonesia (BRI)' },
-        dana:  { no: '0812 3456 7890',     nama: 'a.n. E-Sports Admin (DANA)' },
-        gopay: { no: '0812 3456 7890',     nama: 'a.n. E-Sports Admin (GoPay)' },
-        ovo:   { no: '0812 3456 7890',     nama: 'a.n. E-Sports Admin (OVO)' },
+        mandiri:   { no: '1060019317398',   nama: 'a.n. SATRIA DARZKINE RKT (MANDIRI)' },
+        dana:  { no: '0822 6518 0375',     nama: 'a.n. SATRIA DARZKINE RKT  (DANA)' },
+        gopay: { no: '0822 6518 0375',     nama: 'a.n. SATRIA DARZKINE RKT  (GoPay)' },
+        ovo:   { no: '0822 6518 0375',     nama: 'a.n. SATRIA DARZKINE RKT  (OVO)' },
+        qris:  { no: '0822 6518 0375',     nama: 'a.n. kopi sat (QRIS)' },
     };
     if (methods[metode]) {
         no.innerText = methods[metode].no;
         nama.innerText = methods[metode].nama;
         info.style.display = 'block';
+        
+        if (metode === 'qris') {
+            document.getElementById('qris_container').style.display = 'block';
+            no.style.display = 'none';
+        } else {
+            document.getElementById('qris_container').style.display = 'none';
+            no.style.display = 'block';
+        }
     } else {
         info.style.display = 'none';
     }
