@@ -37,8 +37,8 @@
                         <a href="<?= base_url('tim/detail/'.$t['id_tim']) ?>" class="btn btn-warning btn-sm" title="Detail Tim"><i class="fas fa-eye"></i></a>
                         <?php if ($peran === 'Admin'): ?>
                         <!-- Edit & Hapus: hanya Admin -->
-                        <a href="<?= base_url('tim/edit/'.$t['id_tim']) ?>" class="btn btn-info btn-sm" title="Edit Tim"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('tim/hapus/'.$t['id_tim']) ?>" class="btn btn-danger btn-sm" title="Hapus Tim" onclick="return confirm('Yakin hapus tim ini?')"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('tim/edit/'.$t['id_tim']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                        <a href="<?= base_url('tim/hapus/'.$t['id_tim']) ?>" class="btn btn-danger btn-sm" aria-label="Hapus" onclick="return confirm('Yakin hapus tim ini?')"><i class="fas fa-trash"></i></a>
                         <?php endif; ?>
                     </td>
                 </tr>

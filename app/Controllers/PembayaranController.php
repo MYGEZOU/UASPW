@@ -9,8 +9,7 @@ class PembayaranController extends BaseController
 {
     public function indexPeserta()
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new DaftarModel();
         $id_tim = session()->get('id_tim');
         
@@ -26,8 +25,7 @@ class PembayaranController extends BaseController
 
     public function formUpload($id_daftar)
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new DaftarModel();
         $id_tim = session()->get('id_tim');
         
@@ -54,8 +52,7 @@ class PembayaranController extends BaseController
 
     public function uploadBukti($id_daftar)
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new DaftarModel();
         $id_tim = session()->get('id_tim');
         

@@ -9,8 +9,7 @@ class Anggota extends BaseController
 {
     public function index()
     {
-        $this->checkRole('Admin');
-        
+
         $model = new AnggotaModel();
         $data['anggota'] = $model->getAnggotaWithTim();
         $data['title'] = 'Manajemen Anggota';
@@ -19,8 +18,7 @@ class Anggota extends BaseController
 
     public function tambah()
     {
-        $this->checkRole('Admin');
-        
+
         $timModel = new TimModel();
         $data['tim_list'] = $timModel->findAll();
         $data['title'] = 'Tambah Anggota';
@@ -185,14 +183,26 @@ class Anggota extends BaseController
             return redirect()->to('tim/profil')->with('error', 'Akun ini sudah terhubung ke anggota lain.');
         }
 
+        // Pastikan id_akun bukan kapten dari tim mana pun
+        $timModel = new \App\Models\TimModel();
+        if ($timModel->where('id_akun', $id_akun)->first()) {
+            return redirect()->to('tim/profil')->with('error', 'Akun ini adalah kapten tim dan tidak bisa dijadikan anggota.');
+        }
+
         $model->update($id_anggota, ['id_akun' => $id_akun]);
+        
+        // Verifikasi update
+        $updated = $model->find($id_anggota);
+        if ($updated['id_akun'] != $id_akun) {
+            return redirect()->to('tim/profil')->with('error', 'Gagal menghubungkan akun. Terjadi kesalahan sistem.');
+        }
+
         return redirect()->to('tim/profil')->with('success', 'Akun berhasil dihubungkan! Anggota kini dapat login dan melihat tim ini.');
     }
 
     public function simpan()
     {
-        $this->checkRole('Admin');
-        
+
         $rules = [
             'id_tim'   => 'required',
             'nickname' => 'required|is_unique[anggota.nickname]',
@@ -218,8 +228,7 @@ class Anggota extends BaseController
 
     public function edit($id)
     {
-        $this->checkRole('Admin');
-        
+
         $model = new AnggotaModel();
         $timModel = new TimModel();
         
@@ -231,8 +240,7 @@ class Anggota extends BaseController
 
     public function update($id)
     {
-        $this->checkRole('Admin');
-        
+
         $rules = [
             'id_tim'   => 'required',
             'nickname' => "required|is_unique[anggota.nickname,id_anggota,{$id}]",
@@ -259,8 +267,7 @@ class Anggota extends BaseController
 
     public function hapus($id)
     {
-        $this->checkRole('Admin');
-        
+
         $model = new AnggotaModel();
         $model->delete($id);
         

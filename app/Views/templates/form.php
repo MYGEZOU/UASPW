@@ -4,6 +4,7 @@
             <div class="card-header"><h4><?= isset($turnamen) ? 'Edit' : 'Tambah' ?> Turnamen</h4></div>
             <div class="card-content">
                 <form action="<?= base_url('turnamen/simpan') ?>" method="post">
+                    <?= csrf_field() ?>
                     <div class="card-body">
                         <div class="form-group">
                             <label>Nama Turnamen</label>

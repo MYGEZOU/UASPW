@@ -26,8 +26,7 @@ class Turnamen extends BaseController
     
     public function peserta()
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new TurnamenModel();
         $daftarModel = new DaftarModel();
         $id_tim = session()->get('id_tim');
@@ -49,8 +48,7 @@ class Turnamen extends BaseController
 
     public function tambah()
     {
-        $this->checkRole(['Admin', 'AdminGame']);
-        
+
         $gameModel = new \App\Models\GameModel();
         $data['games'] = $gameModel->findAll();
         $data['title'] = 'Tambah Turnamen';
@@ -59,8 +57,7 @@ class Turnamen extends BaseController
 
     public function simpan()
     {
-        $this->checkRole(['Admin', 'AdminGame']);
-        
+
         $bannerName = $this->handleUpload($this->request->getFile('banner'), 'turnamen', null, 'default_banner.jpg');
         
         $model = new TurnamenModel();
@@ -79,8 +76,7 @@ class Turnamen extends BaseController
 
     public function edit($id)
     {
-        $this->checkRole(['Admin', 'AdminGame']);
-        
+
         $model = new TurnamenModel();
         $gameModel = new \App\Models\GameModel();
         $data['turnamen'] = $model->find($id);
@@ -91,8 +87,7 @@ class Turnamen extends BaseController
 
     public function update($id)
     {
-        $this->checkRole(['Admin', 'AdminGame']);
-        
+
         $model = new TurnamenModel();
         $turnamen = $model->find($id);
         
@@ -112,8 +107,7 @@ class Turnamen extends BaseController
 
     public function hapus($id)
     {
-        $this->checkRole(['Admin', 'AdminGame']);
-        
+
         $model = new TurnamenModel();
         $model->delete($id);
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil dihapus.');
@@ -121,8 +115,7 @@ class Turnamen extends BaseController
 
     public function daftarTersedia()
     {
-        $this->checkRole('Peserta');
-        
+
         $model       = new TurnamenModel();
         $daftarModel = new DaftarModel();
         $timModel    = new TimModel();
@@ -159,8 +152,7 @@ class Turnamen extends BaseController
 
     public function daftarTurnamen($id_turnamen)
     {
-        $this->checkRole('Peserta');
-        
+
         $id_akun  = session()->get('id_akun');
         $id_tim   = session()->get('id_tim');
         $timModel = new TimModel();

@@ -42,8 +42,8 @@
                     </td>
                     <?php if ($peran === 'Admin'): ?>
                     <td style="text-align:center">
-                        <a href="<?= base_url('turnamen/edit/'.$t['id_turnamen']) ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('turnamen/hapus/'.$t['id_turnamen']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus turnamen ini?')"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('turnamen/edit/'.$t['id_turnamen']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                        <a href="<?= base_url('turnamen/hapus/'.$t['id_turnamen']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus turnamen ini?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
                     </td>
                     <?php endif; ?>
                 </tr>

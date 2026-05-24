@@ -81,8 +81,8 @@
                         </td>
                         <td>
                             <?php if ($is_kapten): ?>
-                                <a href="<?= base_url('anggota/edit-peserta/' . $a['id_anggota']) ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></a>
-                                <a href="<?= base_url('anggota/hapus-peserta/' . $a['id_anggota']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus anggota ini?')"><i class="fas fa-trash"></i></a>
+                                <a href="<?= base_url('anggota/edit-peserta/' . $a['id_anggota']) ?>" class="btn btn-warning btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                                <a href="<?= base_url('anggota/hapus-peserta/' . $a['id_anggota']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus anggota ini?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
                             <?php else: ?>
                                 <span style="font-size:11px;color:rgba(255,255,255,.25)">—</span>
                             <?php endif; ?>

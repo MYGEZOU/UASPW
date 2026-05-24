@@ -85,9 +85,13 @@ class Tim extends BaseController
             if ($data['is_kapten']) {
                 $semuaPeserta = $akunModel->where('peran', 'Peserta')->findAll();
                 $terhubung    = array_filter(array_column($rawAnggota, 'id_akun'));
-                $terhubung[]  = $tim['id_akun']; // exclude kapten sendiri
-                $data['peserta_tersedia'] = array_values(array_filter($semuaPeserta, function($p) use ($terhubung) {
-                    return !in_array($p['id_akun'], $terhubung);
+                
+                // Ambil semua id_akun yang sudah menjadi kapten di tim manapun
+                $semuaKapten = array_filter(array_column($model->findAll(), 'id_akun'));
+                
+                $data['peserta_tersedia'] = array_values(array_filter($semuaPeserta, function($p) use ($terhubung, $semuaKapten) {
+                    // Kecualikan yang sudah terhubung atau yang sudah menjadi kapten
+                    return !in_array($p['id_akun'], $terhubung) && !in_array($p['id_akun'], $semuaKapten);
                 }));
             } else {
                 $data['peserta_tersedia'] = [];

@@ -49,7 +49,7 @@
                     <input type="file" name="banner" class="form-control" accept="image/jpeg,image/png,image/webp">
                     <?php if (isset($turnamen) && !empty($turnamen['banner'])): ?>
                         <div style="margin-top: 10px;">
-                            <img src="<?= base_url('uploads/turnamen/' . $turnamen['banner']) ?>" alt="Banner" style="max-width: 100%; border-radius: 8px;">
+                            <img src="<?= base_url('uploads/turnamen/' . $turnamen['banner']) ?>" alt="Banner" width="400" height="200" loading="lazy" style="max-width: 100%; height: auto; border-radius: 8px;">
                         </div>
                     <?php endif; ?>
                 </div>

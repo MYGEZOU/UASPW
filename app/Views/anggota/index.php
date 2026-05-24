@@ -23,8 +23,8 @@
                     <td><?= esc($a['peran']) ?></td>
                     <td><?= esc($a['peringkat_game']) ?></td>
                     <td style="text-align:center">
-                        <a href="<?= base_url('anggota/edit/'.$a['id_anggota']) ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('anggota/hapus/'.$a['id_anggota']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('anggota/edit/'.$a['id_anggota']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                        <a href="<?= base_url('anggota/hapus/'.$a['id_anggota']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

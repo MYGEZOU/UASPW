@@ -40,7 +40,7 @@
                     <h2 id="nomor_rekening" style="margin:5px 0; color:#fff; letter-spacing:2px; font-weight:800;"></h2>
                     <p style="margin:0; font-size:14px; font-weight:600; color:#5383fe" id="nama_rekening"></p>
                     <div id="qris_container" style="display:none; margin-top:15px;">
-                        <img src="<?= base_url('uploads/QRIS.jpeg') ?>" alt="QRIS Barcode" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                        <img src="<?= base_url('uploads/QRIS.jpeg') ?>" alt="QRIS Barcode" width="200" height="200" loading="lazy" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
                     </div>
                 </div>
                 <div class="form-group">

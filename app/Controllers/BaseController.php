@@ -52,31 +52,6 @@ abstract class BaseController extends Controller
         }
     }
 
-    /**
-     * Periksa peran user. Jika tidak sesuai, langsung redirect dan stop eksekusi.
-     * Catatan: Di CI4, return dari helper method tidak menghentikan controller.
-     * Gunakan pola: if ($this->checkRole('Admin')) return;
-     *
-     * @return bool true jika akses ditolak (gunakan: if ($this->denyRole('Admin')) return;)
-     */
-    protected function checkRole($requiredRoles): bool
-    {
-        if (!session()->get('id_akun')) {
-            session()->setFlashdata('error', 'Silakan login terlebih dahulu.');
-            header('Location: ' . base_url('login'));
-            exit;
-        }
-
-        $roles = is_array($requiredRoles) ? $requiredRoles : explode(',', $requiredRoles);
-
-        if (!in_array(session()->get('peran'), $roles)) {
-            session()->setFlashdata('error', 'Akses ditolak.');
-            header('Location: ' . base_url('dashboard'));
-            exit;
-        }
-
-        return false;
-    }
 
     /**
      * Sentralisasi logika upload file untuk menghindari perulangan (DRY)

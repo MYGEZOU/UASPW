@@ -29,8 +29,8 @@
                     <td><?= esc($g['slug']) ?></td>
                     <td><?= esc(substr($g['deskripsi'] ?? '', 0, 50)) ?><?= (strlen($g['deskripsi'] ?? '') > 50) ? '...' : '' ?></td>
                     <td style="text-align:center">
-                        <a href="<?= base_url('game/edit/'.$g['id_game']) ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('game/hapus/'.$g['id_game']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus game ini?')"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('game/edit/'.$g['id_game']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                        <a href="<?= base_url('game/hapus/'.$g['id_game']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus game ini?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

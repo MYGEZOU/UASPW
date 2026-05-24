@@ -42,7 +42,7 @@ $action = $isEdit ? base_url('game/update/'.$game['id_game']) : base_url('game/s
                 <label for="logo" class="form-label">Logo (Opsional)</label>
                 <?php if ($isEdit && $game['logo']): ?>
                     <div style="margin-bottom:10px;">
-                        <img src="<?= base_url('uploads/game/'.$game['logo']) ?>" width="100" style="border-radius:5px;">
+                        <img src="<?= base_url('uploads/game/'.$game['logo']) ?>" width="100" height="100" loading="lazy" style="border-radius:5px; object-fit:contain;">
                     </div>
                 <?php endif; ?>
                 <input type="file" name="logo" id="logo" class="form-control" accept="image/png, image/jpeg, image/jpg, image/webp" onchange="previewImage(event)">

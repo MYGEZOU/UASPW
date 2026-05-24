@@ -26,8 +26,7 @@ class Jadwal extends BaseController
     
     public function mySchedule()
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new JadwalModel();
         $id_tim = session()->get('id_tim');
         

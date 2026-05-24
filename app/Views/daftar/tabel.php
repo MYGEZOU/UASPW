@@ -17,7 +17,7 @@
                 <?php else: ?>
                 <a href="<?= base_url('daftar/ubah-status/'.$d['id_daftar']) ?>" class="btn btn-warning btn-sm">Batalkan Lunas</a>
                 <?php endif; ?>
-                <a href="<?= base_url('daftar/hapus/'.$d['id_daftar']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin menghapus pendaftaran ini?')"><i class="fas fa-trash"></i></a>
+                <a href="<?= base_url('daftar/hapus/'.$d['id_daftar']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin menghapus pendaftaran ini?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
             </td>
         </tr>
         <?php endforeach; ?>

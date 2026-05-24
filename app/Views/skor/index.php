@@ -19,14 +19,23 @@
                 <tr>
                     <td><?= esc($s['nama_turnamen']) ?></td>
                     <td><?= esc($s['nama_tim_1']) ?></td>
-                    <td style="font-weight:800;color:#FF4B2B"><?= $s['skor_tim_1'] ?></td>
-                    <td style="font-weight:800;color:#FF4B2B"><?= $s['skor_tim_2'] ?></td>
-                    <td><?= esc($s['nama_tim_2']) ?></td>
-                    <td><span class="badge badge-success"><?= esc($s['pemenang']) ?></span></td>
-                    <td style="text-align:center">
-                        <a href="<?= base_url('skor/edit/'.$s['id_skor']) ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('skor/hapus/'.$s['id_skor']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')"><i class="fas fa-trash"></i></a>
-                    </td>
+                    <?php if ($s['id_skor']): ?>
+                        <td style="font-weight:800;color:#FF4B2B"><?= $s['skor_tim_1'] ?></td>
+                        <td style="font-weight:800;color:#FF4B2B"><?= $s['skor_tim_2'] ?></td>
+                        <td><?= esc($s['nama_tim_2']) ?></td>
+                        <td><span class="badge badge-success"><?= esc($s['pemenang'] ?: 'Seri') ?></span></td>
+                        <td style="text-align:center">
+                            <a href="<?= base_url('skor/input/'.$s['id_jadwal']) ?>" class="btn btn-info btn-sm" title="Edit Skor"><i class="fas fa-edit"></i> Edit</a>
+                        </td>
+                    <?php else: ?>
+                        <td style="color:rgba(255,255,255,0.2)">-</td>
+                        <td style="color:rgba(255,255,255,0.2)">-</td>
+                        <td><?= esc($s['nama_tim_2']) ?></td>
+                        <td><span class="badge badge-secondary">Belum Main</span></td>
+                        <td style="text-align:center">
+                            <a href="<?= base_url('skor/input/'.$s['id_jadwal']) ?>" class="btn btn-primary btn-sm" title="Input Skor"><i class="fas fa-star"></i> Input</a>
+                        </td>
+                    <?php endif; ?>
                 </tr>
                 <?php endforeach; ?>
                 <?php if (empty($skor)): ?>

@@ -25,8 +25,9 @@
                     <td><?= date('d M H:i', strtotime($j['jadwal_tanding'])) ?></td>
                     <td><span class="badge badge-info"><?= esc($j['babak']) ?></span></td>
                     <td style="text-align:center">
-                        <a href="<?= base_url('jadwal/edit/'.$j['id_jadwal']) ?>" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('jadwal/hapus/'.$j['id_jadwal']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('skor/input/'.$j['id_jadwal']) ?>" class="btn btn-success btn-sm" title="Input Skor"><i class="fas fa-star"></i></a>
+                        <a href="<?= base_url('jadwal/edit/'.$j['id_jadwal']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
+                        <a href="<?= base_url('jadwal/hapus/'.$j['id_jadwal']) ?>" class="btn btn-danger btn-sm" aria-label="Hapus" onclick="return confirm('Yakin?')"><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

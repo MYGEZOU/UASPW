@@ -71,16 +71,38 @@
             <div class="card-header"><h4>Jadwal Pertandingan</h4></div>
             <div class="card-body-inner" style="padding:0">
                 <table class="tbl">
-                    <thead><tr><th>Tanggal</th><th>Turnamen</th><th>Babak</th></tr></thead>
+                    <thead><tr><th>Tanggal</th><th>Turnamen</th><th>Babak</th><th>Hasil</th></tr></thead>
                     <tbody>
                         <?php if (empty($jadwal_tim)): ?>
-                        <tr><td colspan="3" style="text-align:center;padding:20px;color:rgba(255,255,255,.3)">Belum ada jadwal</td></tr>
+                        <tr><td colspan="4" style="text-align:center;padding:20px;color:rgba(255,255,255,.3)">Belum ada jadwal</td></tr>
                         <?php else: ?>
                             <?php foreach ($jadwal_tim as $j): ?>
                             <tr>
                                 <td><?= date('d M H:i', strtotime($j['jadwal_tanding'])) ?></td>
                                 <td><?= esc($j['nama_turnamen']) ?></td>
                                 <td><span class="badge badge-info"><?= esc($j['babak']) ?></span></td>
+                                <td>
+                                    <?php
+                                    $id_tim = session()->get('id_tim');
+                                    if ($j['skor_tim_1'] !== null && $j['skor_tim_2'] !== null) {
+                                        $skor_saya = ($j['id_tim_1'] == $id_tim) ? $j['skor_tim_1'] : $j['skor_tim_2'];
+                                        $skor_lawan = ($j['id_tim_1'] == $id_tim) ? $j['skor_tim_2'] : $j['skor_tim_1'];
+                                        
+                                        $status = '';
+                                        if ($j['id_tim_pemenang'] == $id_tim) {
+                                            $status = '<span class="badge badge-success" style="margin-left:5px;">Win</span>';
+                                        } elseif ($j['id_tim_pemenang'] != null) {
+                                            $status = '<span class="badge badge-danger" style="margin-left:5px;">Lose</span>';
+                                        } else {
+                                            $status = '<span class="badge badge-warning" style="margin-left:5px;">Draw</span>';
+                                        }
+                                        
+                                        echo "<strong>{$skor_saya}-{$skor_lawan}</strong>" . $status;
+                                    } else {
+                                        echo '<span style="color:rgba(255,255,255,.5);">-</span>';
+                                    }
+                                    ?>
+                                </td>
                             </tr>
                             <?php endforeach; ?>
                         <?php endif; ?>

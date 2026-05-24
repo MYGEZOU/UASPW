@@ -14,8 +14,17 @@ class Skor extends BaseController
             return redirect()->to('dashboard')->with('error', 'Akses ditolak.');
         }
 
-        $model = new SkorModel();
-        $data['skor'] = $model->getSkorWithDetail();
+        $db = \Config\Database::connect();
+        $builder = $db->table('jadwal');
+        $builder->select('jadwal.id_jadwal, turnamen.nama_turnamen, tim1.nama_tim as nama_tim_1, tim2.nama_tim as nama_tim_2, skor.id_skor, skor.skor_tim_1, skor.skor_tim_2, tim_pemenang.nama_tim as pemenang');
+        $builder->join('turnamen', 'turnamen.id_turnamen = jadwal.id_turnamen', 'left');
+        $builder->join('tim as tim1', 'tim1.id_tim = jadwal.id_tim_1', 'left');
+        $builder->join('tim as tim2', 'tim2.id_tim = jadwal.id_tim_2', 'left');
+        $builder->join('skor', 'skor.id_jadwal = jadwal.id_jadwal', 'left');
+        $builder->join('tim as tim_pemenang', 'tim_pemenang.id_tim = skor.id_tim_pemenang', 'left');
+        
+        $data['skor'] = $builder->orderBy('jadwal.jadwal_tanding', 'ASC')->get()->getResultArray();
+        
         $data['title'] = 'Manajemen Skor';
         return view('skor/index', $data);
     }
@@ -35,6 +44,7 @@ class Skor extends BaseController
                                     ->first();
 
         $data['jadwal'] = $jadwalDetail;
+        $skorModel = new SkorModel();
         $data['skor_existing'] = $skorModel->where('id_jadwal', $id_jadwal)->first();
         $data['title'] = 'Input Skor Pertandingan';
         return view('skor/form', $data);

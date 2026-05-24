@@ -34,8 +34,7 @@ class Daftar extends BaseController
 
     public function ikut($id_turnamen)
     {
-        $this->checkRole('Peserta');
-        
+
         if (!session()->get('id_tim')) {
             return redirect()->to('tim/profil')->with('error', 'Anda harus memiliki tim untuk mendaftar turnamen.');
         }
@@ -48,8 +47,7 @@ class Daftar extends BaseController
 
     public function prosesIkut()
     {
-        $this->checkRole('Peserta');
-        
+
         $model = new DaftarModel();
         $id_turnamen = $this->request->getVar('id_turnamen');
         $id_tim = session()->get('id_tim');
@@ -64,7 +62,7 @@ class Daftar extends BaseController
             'id_turnamen'       => $id_turnamen,
             'id_tim'            => $id_tim,
             'tanggal_daftar'    => date('Y-m-d H:i:s'),
-            'status_pembayaran' => 'Lunas', // Simulasi langsung lunas
+            'status_pembayaran' => 'Menunggu', // Default harus menunggu untuk upload bukti
         ];
         
         $model->insert($data);
@@ -73,8 +71,7 @@ class Daftar extends BaseController
 
     public function ubahStatus($id_daftar)
     {
-        $this->checkRole('Admin');
-        
+
         $model = new DaftarModel();
         $daftar = $model->find($id_daftar);
         
@@ -86,8 +83,7 @@ class Daftar extends BaseController
 
     public function hapus($id_daftar)
     {
-        $this->checkRole('Admin');
-        
+
         $model = new DaftarModel();
         $model->delete($id_daftar);
         
