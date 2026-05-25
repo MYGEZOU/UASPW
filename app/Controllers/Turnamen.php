@@ -6,8 +6,17 @@ use App\Models\TurnamenModel;
 use App\Models\DaftarModel;
 use App\Models\TimModel;
 
+/**
+ * Controller Turnamen
+ * 
+ * Mengelola data Turnamen E-Sports, dari proses pembuatan, pengeditan, hapus,
+ * hingga menampilkan turnamen tersedia untuk didaftar oleh peserta.
+ */
 class Turnamen extends BaseController
 {
+    /**
+     * Menampilkan semua daftar turnamen (Admin/AdminGame)
+     */
     public function index()
     {
         $peran = session()->get('peran');
@@ -24,6 +33,11 @@ class Turnamen extends BaseController
         return view('turnamen/index', $data);
     }
     
+    /**
+     * Menampilkan daftar turnamen untuk dashboard Peserta
+     * 
+     * Menampilkan status pendaftaran tim peserta ke berbagai turnamen.
+     */
     public function peserta()
     {
 
@@ -46,6 +60,9 @@ class Turnamen extends BaseController
         return view('turnamen/peserta', $data);
     }
 
+    /**
+     * Menampilkan form pembuatan turnamen baru (Admin/AdminGame)
+     */
     public function tambah()
     {
 
@@ -55,6 +72,11 @@ class Turnamen extends BaseController
         return view('turnamen/form', $data);
     }
 
+    /**
+     * Menyimpan data turnamen baru berserta banner
+     * 
+     * Menangani proses upload banner dan memasukkan data turnamen ke database.
+     */
     public function simpan()
     {
 
@@ -74,6 +96,11 @@ class Turnamen extends BaseController
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil ditambahkan.');
     }
 
+    /**
+     * Menampilkan form edit turnamen (Admin/AdminGame)
+     * 
+     * @param int $id ID turnamen
+     */
     public function edit($id)
     {
 
@@ -85,6 +112,13 @@ class Turnamen extends BaseController
         return view('turnamen/form', $data);
     }
 
+    /**
+     * Memperbarui data turnamen
+     * 
+     * Menangani perubahan data termasuk jika ada upload banner baru.
+     * 
+     * @param int $id ID turnamen
+     */
     public function update($id)
     {
 
@@ -105,6 +139,11 @@ class Turnamen extends BaseController
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil diupdate.');
     }
 
+    /**
+     * Menghapus data turnamen
+     * 
+     * @param int $id ID turnamen
+     */
     public function hapus($id)
     {
 
@@ -113,6 +152,11 @@ class Turnamen extends BaseController
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil dihapus.');
     }
 
+    /**
+     * Menampilkan daftar turnamen yang masih berstatus 'Pendaftaran' untuk publik/peserta
+     * 
+     * Melakukan pengecekan status kapten tim dan riwayat pendaftaran.
+     */
     public function daftarTersedia()
     {
 
@@ -150,6 +194,14 @@ class Turnamen extends BaseController
         return view('turnamen/daftar_tersedia', $data);
     }
 
+    /**
+     * Memproses pendaftaran tim yang dilakukan oleh kapten ke sebuah turnamen
+     * 
+     * Mengecek validitas turnamen, memastikan tim belum terdaftar, lalu
+     * menyimpan pendaftaran dan mengarahkan ke form pembayaran.
+     * 
+     * @param int $id_turnamen ID turnamen yang dipilih
+     */
     public function daftarTurnamen($id_turnamen)
     {
 

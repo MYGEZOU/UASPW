@@ -6,8 +6,20 @@ use App\Models\TurnamenModel;
 use App\Models\TimModel;
 use App\Models\JadwalModel;
 
+/**
+ * Controller Dashboard
+ * 
+ * Menampilkan halaman utama (dashboard) untuk pengguna yang berhasil login.
+ * Tampilan dan data yang disajikan berbeda-beda tergantung peran (Admin, AdminGame, Peserta).
+ */
 class Dashboard extends BaseController
 {
+    /**
+     * Menampilkan dashboard sesuai dengan peran user
+     * 
+     * Mengumpulkan statistik (total turnamen, tim, peserta, pendapatan, jadwal) 
+     * lalu me-load view yang relevan ('admin', 'admin_game', atau 'peserta').
+     */
     public function index()
     {
         $turnamenModel = new TurnamenModel();

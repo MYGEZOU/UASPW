@@ -5,8 +5,18 @@ namespace App\Controllers;
 use App\Models\SkorModel;
 use App\Models\JadwalModel;
 
+/**
+ * Controller Skor
+ * 
+ * Mengelola input dan manajemen hasil skor pertandingan dari jadwal turnamen.
+ */
 class Skor extends BaseController
 {
+    /**
+     * Menampilkan daftar seluruh skor pertandingan (Admin/AdminGame)
+     * 
+     * Melakukan join dengan tabel jadwal, turnamen, dan tim untuk menampilkan data secara lengkap.
+     */
     public function index()
     {
         $peran = session()->get('peran');
@@ -29,6 +39,11 @@ class Skor extends BaseController
         return view('skor/index', $data);
     }
 
+    /**
+     * Menampilkan form untuk menginput atau mengedit skor pertandingan
+     * 
+     * @param int $id_jadwal ID jadwal pertandingan
+     */
     public function input($id_jadwal)
     {
         $peran = session()->get('peran');
@@ -50,6 +65,12 @@ class Skor extends BaseController
         return view('skor/form', $data);
     }
 
+    /**
+     * Menyimpan hasil skor pertandingan
+     * 
+     * Menyimpan input skor tim 1 dan skor tim 2, serta secara otomatis menentukan 
+     * tim pemenang berdasarkan skor yang lebih tinggi.
+     */
     public function simpan()
     {
         $peran = session()->get('peran');

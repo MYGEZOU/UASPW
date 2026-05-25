@@ -5,6 +5,12 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 
+/**
+ * Controller GameController
+ * 
+ * Mengelola master data Game (nama, deskripsi, logo) yang akan dipertandingkan
+ * dalam turnamen-turnamen e-sports.
+ */
 class GameController extends BaseController
 {
     protected $gameModel;
@@ -14,6 +20,14 @@ class GameController extends BaseController
         $this->gameModel = new \App\Models\GameModel();
     }
 
+    public function __construct()
+    {
+        $this->gameModel = new \App\Models\GameModel();
+    }
+
+    /**
+     * Menampilkan daftar semua game
+     */
     public function index()
     {
         $data = [
@@ -23,6 +37,9 @@ class GameController extends BaseController
         return view('game/index', $data);
     }
 
+    /**
+     * Menampilkan form untuk menambah game baru
+     */
     public function create()
     {
         $data = [
@@ -31,6 +48,12 @@ class GameController extends BaseController
         return view('game/form', $data);
     }
 
+    /**
+     * Menyimpan data game baru ke database
+     * 
+     * Memvalidasi input (nama unik, format logo), menangani upload file logo, 
+     * dan menyimpannya.
+     */
     public function store()
     {
         $rules = [
@@ -53,6 +76,11 @@ class GameController extends BaseController
         return redirect()->to('game')->with('success', 'Game berhasil ditambahkan.');
     }
 
+    /**
+     * Menampilkan form edit game
+     * 
+     * @param int $id ID game yang akan diedit
+     */
     public function edit($id)
     {
         $data = [
@@ -67,6 +95,13 @@ class GameController extends BaseController
         return view('game/form', $data);
     }
 
+    /**
+     * Memperbarui data game
+     * 
+     * Memvalidasi input dan menangani proses upload logo baru (jika ada) untuk menimpa yang lama.
+     * 
+     * @param int $id ID game
+     */
     public function update($id)
     {
         $game = $this->gameModel->find($id);
@@ -95,6 +130,14 @@ class GameController extends BaseController
         return redirect()->to('game')->with('success', 'Game berhasil diupdate.');
     }
 
+    /**
+     * Menghapus game
+     * 
+     * Memeriksa apakah game sedang digunakan dalam turnamen sebelum menghapusnya.
+     * Jika aman, file logo fisik juga dihapus.
+     * 
+     * @param int $id ID game
+     */
     public function delete($id)
     {
         $game = $this->gameModel->find($id);

@@ -6,8 +6,19 @@ use App\Models\JadwalModel;
 use App\Models\TurnamenModel;
 use App\Models\TimModel;
 
+/**
+ * Controller Jadwal
+ * 
+ * Mengelola jadwal pertandingan turnamen, termasuk pembuatan jadwal oleh 
+ * Admin/AdminGame dan melihat jadwal oleh Peserta.
+ */
 class Jadwal extends BaseController
 {
+    /**
+     * Menampilkan seluruh jadwal pertandingan (Admin/AdminGame)
+     * 
+     * Jika diakses oleh Peserta, akan diredirect ke jadwal spesifik mereka.
+     */
     public function index()
     {
         $peran = session()->get('peran');
@@ -24,6 +35,9 @@ class Jadwal extends BaseController
         return view('jadwal/index', $data);
     }
     
+    /**
+     * Menampilkan jadwal pertandingan spesifik untuk tim user (Peserta) yang login
+     */
     public function mySchedule()
     {
 
@@ -40,6 +54,11 @@ class Jadwal extends BaseController
         return view('jadwal/peserta', $data);
     }
 
+    /**
+     * Menampilkan form untuk membuat jadwal pertandingan baru (Admin/AdminGame)
+     * 
+     * Memuat daftar turnamen (yang sedang pendaftaran atau berlangsung) dan daftar tim.
+     */
     public function create()
     {
         $peran = session()->get('peran');
@@ -63,6 +82,11 @@ class Jadwal extends BaseController
         return view('jadwal/form', $data);
     }
 
+    /**
+     * Menyimpan jadwal pertandingan baru
+     * 
+     * Menyimpan data dari form tambah jadwal (turnamen, tim 1, tim 2, tanggal, babak).
+     */
     public function store()
     {
         $peran = session()->get('peran');
@@ -89,6 +113,11 @@ class Jadwal extends BaseController
         return redirect()->to('jadwal')->with('success', 'Jadwal berhasil ditambahkan.');
     }
 
+    /**
+     * Menampilkan form edit jadwal
+     * 
+     * @param int $id ID jadwal
+     */
     public function edit($id)
     {
         $peran = session()->get('peran');
@@ -123,6 +152,11 @@ class Jadwal extends BaseController
         return view('jadwal/form', $data);
     }
 
+    /**
+     * Menyimpan pembaruan data jadwal
+     * 
+     * @param int $id ID jadwal
+     */
     public function update($id)
     {
         $peran = session()->get('peran');
@@ -155,6 +189,11 @@ class Jadwal extends BaseController
         return redirect()->to('jadwal')->with('success', 'Jadwal berhasil diupdate.');
     }
 
+    /**
+     * Menghapus jadwal pertandingan
+     * 
+     * @param int $id ID jadwal
+     */
     public function delete($id)
     {
         $peran = session()->get('peran');

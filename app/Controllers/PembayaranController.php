@@ -5,8 +5,17 @@ namespace App\Controllers;
 use App\Models\DaftarModel;
 use App\Models\TurnamenModel;
 
+/**
+ * Controller PembayaranController
+ * 
+ * Mengelola proses pembayaran dan konfirmasi pendaftaran turnamen oleh tim/peserta
+ * maupun Admin.
+ */
 class PembayaranController extends BaseController
 {
+    /**
+     * Menampilkan riwayat pendaftaran dan pembayaran (Peserta)
+     */
     public function indexPeserta()
     {
 
@@ -23,6 +32,11 @@ class PembayaranController extends BaseController
         return view('daftar/peserta_index', $data);
     }
 
+    /**
+     * Menampilkan form untuk mengupload bukti pembayaran
+     * 
+     * @param int $id_daftar ID pendaftaran
+     */
     public function formUpload($id_daftar)
     {
 
@@ -50,6 +64,14 @@ class PembayaranController extends BaseController
         return view('daftar/upload_bukti', $data);
     }
 
+    /**
+     * Memproses upload file bukti pembayaran (Peserta)
+     * 
+     * Memvalidasi file gambar/pdf, menyimpannya di server, dan mengupdate field 
+     * bukti_pembayaran di tabel pendaftaran.
+     * 
+     * @param int $id_daftar ID pendaftaran
+     */
     public function uploadBukti($id_daftar)
     {
 
@@ -86,6 +108,9 @@ class PembayaranController extends BaseController
         return redirect()->to('pembayaran/saya')->with('success', 'Bukti pembayaran berhasil diupload. Harap tunggu konfirmasi.');
     }
 
+    /**
+     * Menampilkan daftar pembayaran yang masih 'Menunggu' konfirmasi (Admin/AdminGame)
+     */
     public function daftarMenunggu()
     {
         $peran = session()->get('peran');
@@ -103,6 +128,13 @@ class PembayaranController extends BaseController
         return view('daftar/admin_menunggu', $data);
     }
 
+    /**
+     * Mengonfirmasi pembayaran menjadi 'Lunas' (Admin/AdminGame)
+     * 
+     * Mengupdate status pembayaran serta mencatat tanggal dan siapa admin yang mengkonfirmasi.
+     * 
+     * @param int $id_daftar ID pendaftaran
+     */
     public function konfirmasi($id_daftar)
     {
         $peran = session()->get('peran');
@@ -126,6 +158,9 @@ class PembayaranController extends BaseController
         return redirect()->back()->with('success', 'Pembayaran berhasil dikonfirmasi (Lunas).');
     }
 
+    /**
+     * Menampilkan riwayat pendaftaran yang sudah 'Lunas' (Admin/AdminGame)
+     */
     public function daftarRiwayat()
     {
         $peran = session()->get('peran');

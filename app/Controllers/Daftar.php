@@ -5,8 +5,20 @@ namespace App\Controllers;
 use App\Models\DaftarModel;
 use App\Models\TurnamenModel;
 
+/**
+ * Controller Daftar
+ * 
+ * Mengelola pendaftaran turnamen oleh tim/peserta. Termasuk proses
+ * pendaftaran, konfirmasi pembayaran, dan pembatalan pendaftaran.
+ */
 class Daftar extends BaseController
 {
+    /**
+     * Menampilkan daftar semua pendaftaran
+     * 
+     * Hanya dapat diakses oleh Admin atau AdminGame. Memisahkan data pendaftaran
+     * menjadi daftar "Menunggu" pembayaran dan "Lunas".
+     */
     public function index()
     {
         $model = new DaftarModel();
@@ -32,6 +44,11 @@ class Daftar extends BaseController
         }
     }
 
+    /**
+     * Menampilkan halaman konfirmasi pendaftaran turnamen
+     * 
+     * @param int $id_turnamen ID turnamen yang ingin diikuti
+     */
     public function ikut($id_turnamen)
     {
 
@@ -45,6 +62,12 @@ class Daftar extends BaseController
         return view('daftar/ikut', $data);
     }
 
+    /**
+     * Memproses pendaftaran tim ke turnamen
+     * 
+     * Mengecek apakah tim sudah mendaftar, lalu menyimpan data pendaftaran
+     * dengan status pembayaran default 'Menunggu'.
+     */
     public function prosesIkut()
     {
 
@@ -69,6 +92,13 @@ class Daftar extends BaseController
         return redirect()->to('turnamen/peserta')->with('success', 'Berhasil mendaftar turnamen.');
     }
 
+    /**
+     * Mengubah status pembayaran (Admin/AdminGame)
+     * 
+     * Melakukan toggle status antara 'Menunggu' dan 'Lunas'.
+     * 
+     * @param int $id_daftar ID pendaftaran
+     */
     public function ubahStatus($id_daftar)
     {
 
@@ -81,6 +111,11 @@ class Daftar extends BaseController
         return redirect()->to('daftar')->with('success', 'Status pembayaran berhasil diubah.');
     }
 
+    /**
+     * Menghapus data pendaftaran (Admin/AdminGame)
+     * 
+     * @param int $id_daftar ID pendaftaran
+     */
     public function hapus($id_daftar)
     {
 

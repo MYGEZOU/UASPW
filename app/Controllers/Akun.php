@@ -2,8 +2,19 @@
 
 use App\Models\AkunModel;
 
+/**
+ * Controller Akun
+ * 
+ * Mengelola data akun pengguna, termasuk proses CRUD (Create, Read, Update, Delete)
+ * untuk pengguna (Admin, AdminGame, Peserta) serta pengelolaan profil mandiri.
+ */
 class Akun extends BaseController
 {
+    /**
+     * Menampilkan daftar semua akun
+     * 
+     * Mengambil data dari AkunModel dan menampilkannya di halaman manajemen akun.
+     */
     public function index()
     {
         $model = new AkunModel();
@@ -12,12 +23,21 @@ class Akun extends BaseController
         return view('akun/index', $data);
     }
 
+    /**
+     * Menampilkan form untuk menambah akun baru
+     */
     public function tambah()
     {
         return view('akun/form', ['title' => 'Tambah Akun']);
     }
 
 
+    /**
+     * Menyimpan data akun baru ke database
+     * 
+     * Memvalidasi input (username, email, password, dll), melakukan hashing pada password,
+     * lalu menyimpan data melalui AkunModel.
+     */
     public function simpan()
     {
         $rules = [
@@ -46,6 +66,11 @@ class Akun extends BaseController
         return redirect()->to('akun');
     }
 
+    /**
+     * Menampilkan form edit untuk akun tertentu
+     * 
+     * @param int $id ID dari akun yang akan diedit
+     */
     public function edit($id)
     {
         $model = new AkunModel();
@@ -54,6 +79,14 @@ class Akun extends BaseController
         return view('akun/form', $data);
     }
 
+    /**
+     * Memperbarui data akun di database
+     * 
+     * Melakukan validasi input. Jika password diisi, maka password akan di-hash dan diupdate,
+     * jika tidak, hanya data lain yang diupdate.
+     * 
+     * @param int $id ID dari akun yang akan diperbarui
+     */
     public function update($id)
     {
         $rules = [
@@ -85,12 +118,22 @@ class Akun extends BaseController
         return redirect()->to('akun');
     }
 
+    /**
+     * Menghapus akun dari database
+     * 
+     * @param int $id ID dari akun yang akan dihapus
+     */
     public function hapus($id)
     {
         (new AkunModel())->delete($id);
         return redirect()->to('akun');
     }
 
+    /**
+     * Menampilkan halaman profil untuk user yang sedang login
+     * 
+     * Memeriksa session, mengambil data akun user yang aktif, dan menampilkan form edit profil.
+     */
     public function profil()
     {
         $id_akun = session()->get('id_akun');
@@ -102,6 +145,12 @@ class Akun extends BaseController
         return view('akun/profil', $data);
     }
 
+    /**
+     * Memperbarui data profil mandiri user yang sedang login
+     * 
+     * Memvalidasi perubahan data diri, termasuk konfirmasi jika mengubah password,
+     * dan merefresh data session 'nama_lengkap' setelah berhasil diubah.
+     */
     public function updateProfil()
     {
         $id_akun = session()->get('id_akun');

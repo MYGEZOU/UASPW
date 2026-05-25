@@ -5,8 +5,16 @@ namespace App\Controllers;
 use App\Models\TimModel;
 use App\Models\AnggotaModel;
 
+/**
+ * Controller Tim
+ * 
+ * Mengelola data Tim e-sports berserta informasi kapten dan anggotanya.
+ */
 class Tim extends BaseController
 {
+    /**
+     * Menampilkan seluruh daftar tim (Admin/AdminGame)
+     */
     public function index()
     {
         $model = new TimModel();
@@ -21,6 +29,11 @@ class Tim extends BaseController
         }
     }
 
+    /**
+     * Menampilkan detail informasi dari sebuah tim beserta anggotanya (Admin/AdminGame)
+     * 
+     * @param int $id ID tim
+     */
     public function detail($id)
     {
         $peran = session()->get('peran');
@@ -41,6 +54,12 @@ class Tim extends BaseController
         return view('tim/detail', $data);
     }
 
+    /**
+     * Menampilkan profil tim untuk user/peserta yang sedang login
+     * 
+     * Mengecek apakah user merupakan kapten atau hanya anggota. Menampilkan daftar anggota,
+     * serta fitur tambahan bagi kapten (misalnya mencari peserta lain untuk direkrut).
+     */
     public function profil()
     {
         // Peserta melihat profil tim sendiri
@@ -103,6 +122,12 @@ class Tim extends BaseController
         return view('tim/profil', $data);
     }
 
+    /**
+     * Menampilkan form untuk membuat tim baru
+     * 
+     * Peserta yang sudah tergabung dalam tim (sebagai kapten/anggota) tidak bisa 
+     * membuat tim baru. Admin dapat memilih peserta mana yang dijadikan kapten.
+     */
     public function tambah()
     {
         $data['title'] = 'Buat Tim Baru';
@@ -131,6 +156,12 @@ class Tim extends BaseController
         return view('tim/form', $data);
     }
 
+    /**
+     * Menyimpan data tim baru ke database
+     * 
+     * Mengambil ID akun yang diassign sebagai kapten, menyimpan data tim, dan merefresh session
+     * id_tim jika yang membuat adalah peserta itu sendiri.
+     */
     public function simpan()
     {
         $model = new TimModel();
@@ -157,6 +188,13 @@ class Tim extends BaseController
         return redirect()->to('tim')->with('success', 'Tim berhasil dibuat.');
     }
 
+    /**
+     * Menampilkan form untuk mengedit profil tim
+     * 
+     * Hanya kapten tim atau Admin yang diizinkan untuk mengedit.
+     * 
+     * @param int $id ID tim
+     */
     public function edit($id)
     {
         $model = new TimModel();
@@ -174,6 +212,11 @@ class Tim extends BaseController
         return view('tim/form', $data);
     }
 
+    /**
+     * Menyimpan perubahan data profil tim
+     * 
+     * @param int $id ID tim
+     */
     public function update($id)
     {
         $model = new TimModel();
@@ -191,6 +234,13 @@ class Tim extends BaseController
         return redirect()->to('tim')->with('success', 'Tim berhasil diupdate.');
     }
 
+    /**
+     * Menghapus tim
+     * 
+     * Jika dihapus oleh peserta (kapten), session id_tim juga dibersihkan.
+     * 
+     * @param int $id ID tim
+     */
     public function hapus($id)
     {
         $model = new TimModel();

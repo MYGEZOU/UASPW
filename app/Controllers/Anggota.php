@@ -5,8 +5,19 @@ namespace App\Controllers;
 use App\Models\AnggotaModel;
 use App\Models\TimModel;
 
+/**
+ * Controller Anggota
+ * 
+ * Mengelola data anggota tim. Controller ini menangani proses untuk manajemen anggota 
+ * baik oleh Admin maupun oleh Kapten Tim (Peserta).
+ */
 class Anggota extends BaseController
 {
+    /**
+     * Menampilkan daftar semua anggota
+     * 
+     * Mengambil seluruh data anggota berserta tim mereka untuk ditampilkan (biasanya untuk Admin).
+     */
     public function index()
     {
 
@@ -16,6 +27,9 @@ class Anggota extends BaseController
         return view('anggota/index', $data);
     }
 
+    /**
+     * Menampilkan form tambah anggota (Admin)
+     */
     public function tambah()
     {
 
@@ -28,6 +42,12 @@ class Anggota extends BaseController
     // -------------------------------------------------------
     // AKSES PESERTA: tambah anggota ke tim sendiri
     // -------------------------------------------------------
+    /**
+     * Menampilkan form untuk menambahkan anggota tim oleh Peserta (Kapten Tim)
+     * 
+     * Menyiapkan daftar akun peserta yang belum menjadi anggota di tim manapun
+     * dan tidak menjadi kapten di tim lain.
+     */
     public function tambahPeserta()
     {
         $id_tim = session()->get('id_tim');
@@ -57,6 +77,11 @@ class Anggota extends BaseController
         return view('anggota/form_peserta', $data);
     }
 
+    /**
+     * Menyimpan data anggota baru ke dalam tim (oleh Kapten Tim)
+     * 
+     * Memvalidasi input dan memasukkan anggota baru ke dalam tim milik user yang login.
+     */
     public function simpanPeserta()
     {
         $id_tim = session()->get('id_tim');
@@ -87,6 +112,11 @@ class Anggota extends BaseController
         return redirect()->to('tim/profil')->with('success', 'Anggota berhasil ditambahkan.');
     }
 
+    /**
+     * Menampilkan form edit anggota (oleh Kapten Tim)
+     * 
+     * @param int $id ID anggota yang akan diedit
+     */
     public function editPeserta($id)
     {
         $id_tim = session()->get('id_tim');
@@ -106,6 +136,11 @@ class Anggota extends BaseController
         return view('anggota/form_peserta', $data);
     }
 
+    /**
+     * Memperbarui data anggota tim (oleh Kapten Tim)
+     * 
+     * @param int $id ID anggota yang akan diupdate
+     */
     public function updatePeserta($id)
     {
         $id_tim = session()->get('id_tim');
@@ -139,6 +174,11 @@ class Anggota extends BaseController
         return redirect()->to('tim/profil')->with('success', 'Anggota berhasil diupdate.');
     }
 
+    /**
+     * Menghapus anggota dari tim (oleh Kapten Tim)
+     * 
+     * @param int $id ID anggota yang akan dihapus
+     */
     public function hapusPeserta($id)
     {
         $id_tim = session()->get('id_tim');
@@ -157,7 +197,13 @@ class Anggota extends BaseController
         return redirect()->to('tim/profil')->with('success', 'Anggota berhasil dihapus.');
     }
 
-    // Hubungkan anggota yang sudah ada ke akun peserta
+    /**
+     * Menghubungkan anggota (yang sebelumnya belum memiliki akun) dengan akun terdaftar
+     * 
+     * Memastikan akun yang dipilih valid dan belum tergabung di tim manapun.
+     * 
+     * @param int $id_anggota ID anggota yang ingin dihubungkan
+     */
     public function linkAkun($id_anggota)
     {
         $id_tim = session()->get('id_tim');
@@ -200,6 +246,9 @@ class Anggota extends BaseController
         return redirect()->to('tim/profil')->with('success', 'Akun berhasil dihubungkan! Anggota kini dapat login dan melihat tim ini.');
     }
 
+    /**
+     * Menyimpan data anggota baru (Admin)
+     */
     public function simpan()
     {
 
@@ -226,6 +275,11 @@ class Anggota extends BaseController
         return redirect()->to($redirectUrl)->with('success', 'Anggota berhasil ditambahkan.');
     }
 
+    /**
+     * Menampilkan form edit anggota (Admin)
+     * 
+     * @param int $id ID anggota
+     */
     public function edit($id)
     {
 
@@ -238,6 +292,11 @@ class Anggota extends BaseController
         return view('anggota/form', $data);
     }
 
+    /**
+     * Memperbarui data anggota (Admin)
+     * 
+     * @param int $id ID anggota
+     */
     public function update($id)
     {
 
@@ -265,6 +324,11 @@ class Anggota extends BaseController
         return redirect()->to($redirectUrl)->with('success', 'Anggota berhasil diupdate.');
     }
 
+    /**
+     * Menghapus anggota (Admin)
+     * 
+     * @param int $id ID anggota
+     */
     public function hapus($id)
     {
 

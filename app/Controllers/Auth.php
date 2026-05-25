@@ -5,8 +5,17 @@ use App\Models\AkunModel;
 use App\Models\TimModel;
 use App\Models\AnggotaModel;
 
+/**
+ * Controller Auth
+ * 
+ * Menangani proses otentikasi pengguna seperti login, registrasi, lupa password,
+ * reset password, dan proses logout.
+ */
 class Auth extends BaseController
 {
+    /**
+     * Menampilkan halaman login
+     */
     public function login()
     {
         if (session()->get('id_akun')) {
@@ -15,6 +24,12 @@ class Auth extends BaseController
         return view('auth/login', ['title' => 'Login | E-Sports Tournament']);
     }
 
+    /**
+     * Menangani permintaan untuk menampilkan form registrasi.
+     * 
+     * Mengatur flash data untuk memunculkan panel registrasi di halaman yang sama,
+     * lalu me-redirect kembali ke halaman login.
+     */
     public function register()
     {
         if (session()->get('id_akun')) {
@@ -25,6 +40,12 @@ class Auth extends BaseController
         return redirect()->to(base_url('login'));
     }
 
+    /**
+     * Memproses percobaan login
+     * 
+     * Mengecek validitas username/email dan password, menginisialisasi sesi,
+     * serta mengecek apakah user (Peserta) memiliki/tergabung dalam tim.
+     */
     public function doLogin()
     {
         $model = new AkunModel();
@@ -84,6 +105,12 @@ class Auth extends BaseController
         }
     }
 
+    /**
+     * Memproses registrasi akun baru (secara publik)
+     * 
+     * Validasi form, membuat username unik otomatis (dari nama depan + angka acak), 
+     * melakukan hash pada password, dan menyimpan data akun dengan peran 'Peserta'.
+     */
     public function doRegister()
     {
         $model = new AkunModel();
@@ -205,6 +232,11 @@ class Auth extends BaseController
     }
 
     // ─────────────────────────────────────────────
+    /**
+     * Memproses logout
+     * 
+     * Menghancurkan seluruh data sesi dan mengarahkan kembali ke halaman login.
+     */
     public function logout()
     {
         session()->destroy();

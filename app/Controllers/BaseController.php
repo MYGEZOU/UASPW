@@ -27,6 +27,12 @@ abstract class BaseController extends Controller
 
     protected $session;
 
+    /**
+     * Inisialisasi awal controller
+     * 
+     * Memanggil helper yang dibutuhkan, memuat sesi, dan membagikan data
+     * user yang sedang login ke seluruh tampilan (view) secara global.
+     */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
         // Do NOT edit the next line...
