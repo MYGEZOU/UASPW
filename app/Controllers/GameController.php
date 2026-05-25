@@ -20,11 +20,6 @@ class GameController extends BaseController
         $this->gameModel = new \App\Models\GameModel();
     }
 
-    public function __construct()
-    {
-        $this->gameModel = new \App\Models\GameModel();
-    }
-
     /**
      * Menampilkan daftar semua game
      */
