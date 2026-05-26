@@ -18,6 +18,10 @@
                     <input type="text" name="nama_turnamen" class="form-control" value="<?= old('nama_turnamen', $turnamen['nama_turnamen'] ?? '') ?>" required>
                 </div>
                 <div class="form-group">
+                    <label class="form-label">Deskripsi Turnamen</label>
+                    <textarea name="deskripsi" class="form-control" rows="4"><?= old('deskripsi', $turnamen['deskripsi'] ?? '') ?></textarea>
+                </div>
+                <div class="form-group">
                     <label class="form-label">Game</label>
                     <select name="id_game" class="form-control" required>
                         <option value="">-- Pilih Game --</option>

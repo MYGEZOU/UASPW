@@ -33,10 +33,12 @@ $routes->post('reset-password/update', 'Auth::prosesResetPassword');
 $routes->get('dashboard', 'Dashboard::index', ['filter' => 'role']);
 
 // --------------------------------------------------------------
-// PROFIL (Semua role)
+// PROFIL & DETAIL (Semua role)
 // --------------------------------------------------------------
 $routes->get('profil', 'Akun::profil', ['filter' => 'role']);
 $routes->post('profil/update', 'Akun::updateProfil', ['filter' => 'role']);
+
+$routes->get('turnamen/detail/(:num)', 'Turnamen::detail/$1', ['filter' => 'role']);
 
 // --------------------------------------------------------------
 // AKSES ADMIN

@@ -172,7 +172,8 @@
                     Rp <?= number_format($t['biaya_pendaftaran'], 0, ',', '.') ?>
                     <span>/ tim</span>
                 </div>
-                <div class="tc-footer">
+                <div class="tc-footer" style="flex-wrap: wrap;">
+                    <a href="<?= base_url('turnamen/detail/' . $t['id_turnamen']) ?>" class="btn btn-secondary" style="flex: 1; min-width: 45%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-info-circle" style="margin-right:5px"></i> Detail</a>
                     <?php if ($sudahDaftar): ?>
                         <div class="tc-registered">
                             <?php if ($statusBayar === 'Menunggu'): ?>

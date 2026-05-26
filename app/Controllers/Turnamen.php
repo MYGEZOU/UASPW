@@ -85,6 +85,7 @@ class Turnamen extends BaseController
         $model = new TurnamenModel();
         $data = [
             'nama_turnamen'     => $this->request->getVar('nama_turnamen'),
+            'deskripsi'         => $this->request->getVar('deskripsi'),
             'id_game'           => $this->request->getVar('id_game'),
             'tanggal_mulai'     => $this->request->getVar('tanggal_mulai'),
             'biaya_pendaftaran' => $this->request->getVar('biaya_pendaftaran'),
@@ -127,6 +128,7 @@ class Turnamen extends BaseController
         
         $data = [
             'nama_turnamen'     => $this->request->getVar('nama_turnamen'),
+            'deskripsi'         => $this->request->getVar('deskripsi'),
             'id_game'           => $this->request->getVar('id_game'),
             'tanggal_mulai'     => $this->request->getVar('tanggal_mulai'),
             'biaya_pendaftaran' => $this->request->getVar('biaya_pendaftaran'),
@@ -150,6 +152,28 @@ class Turnamen extends BaseController
         $model = new TurnamenModel();
         $model->delete($id);
         return redirect()->to('turnamen')->with('success', 'Turnamen berhasil dihapus.');
+    }
+
+    /**
+     * Menampilkan detail turnamen
+     * 
+     * @param int $id ID turnamen
+     */
+    public function detail($id)
+    {
+        $model = new TurnamenModel();
+        $turnamen = $model->select('turnamen.*, game.nama_game as game')
+                          ->join('game', 'game.id_game = turnamen.id_game', 'left')
+                          ->where('turnamen.id_turnamen', $id)
+                          ->first();
+                          
+        if (!$turnamen) {
+            return redirect()->back()->with('error', 'Turnamen tidak ditemukan.');
+        }
+
+        $data['turnamen'] = $turnamen;
+        $data['title'] = 'Detail Turnamen';
+        return view('turnamen/detail', $data);
     }
 
     /**

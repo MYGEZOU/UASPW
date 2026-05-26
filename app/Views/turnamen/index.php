@@ -23,9 +23,7 @@
                     <th>Tgl Mulai</th>
                     <th>Biaya</th>
                     <th>Status</th>
-                    <?php if ($peran === 'Admin'): ?>
                     <th style="text-align:center">Aksi</th>
-                    <?php endif; ?>
                 </tr>
             </thead>
             <tbody>
@@ -40,17 +38,18 @@
                             <?= esc($t['status']) ?>
                         </span>
                     </td>
-                    <?php if ($peran === 'Admin'): ?>
                     <td style="text-align:center">
-                        <a href="<?= base_url('turnamen/edit/'.$t['id_turnamen']) ?>" class="btn btn-info btn-sm" aria-label="Edit"><i class="fas fa-edit"></i></a>
-                        <a href="<?= base_url('turnamen/hapus/'.$t['id_turnamen']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus turnamen ini?')" aria-label="Hapus"><i class="fas fa-trash"></i></a>
+                        <a href="<?= base_url('turnamen/detail/'.$t['id_turnamen']) ?>" class="btn btn-secondary btn-sm" aria-label="Detail" title="Detail"><i class="fas fa-eye"></i></a>
+                        <a href="<?= base_url('turnamen/edit/'.$t['id_turnamen']) ?>" class="btn btn-info btn-sm" aria-label="Edit" title="Edit"><i class="fas fa-edit"></i></a>
+                        <?php if ($peran === 'Admin'): ?>
+                        <a href="<?= base_url('turnamen/hapus/'.$t['id_turnamen']) ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus turnamen ini?')" aria-label="Hapus" title="Hapus"><i class="fas fa-trash"></i></a>
+                        <?php endif; ?>
                     </td>
-                    <?php endif; ?>
                 </tr>
                 <?php endforeach; ?>
                 <?php if (empty($turnamen)): ?>
                 <tr>
-                    <td colspan="<?= $peran === 'Admin' ? '6' : '5' ?>">
+                    <td colspan="6">
                         <div class="empty-state"><i class="fas fa-trophy"></i><p>Belum ada data turnamen</p></div>
                     </td>
                 </tr>

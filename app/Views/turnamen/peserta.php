@@ -43,6 +43,7 @@
                             <?php else: ?>
                                 <span style="color:rgba(255,255,255,.25)">–</span>
                             <?php endif; ?>
+                            <a href="<?= base_url('turnamen/detail/' . $t['id_turnamen']) ?>" class="btn btn-secondary btn-sm" style="margin-left:5px" title="Detail"><i class="fas fa-eye"></i> Detail</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>
